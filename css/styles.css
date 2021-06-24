@@ -1,0 +1,125 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+/* usage
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif;
+*/
+
+/* Global Styles */
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color1:hsl(31, 77%, 52%);
+    --primary-color2:hsl(184, 100%, 22%);
+    --primary-color3:hsl(179, 100%, 13%);
+    --neutral-color1:hsla(0, 0%, 100%, 0.75);
+    --neutral-color2:hsl(0, 0%, 95%);
+}
+
+body{
+    font-size: 15px;
+    margin:0 15%;
+    padding: 0;
+}
+
+h1{
+    color: var(--neutral-color2);
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+p{
+    color:var(--neutral-color1);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.btn{
+    padding:10px 20px;
+    border-radius: 20px;
+    border: none;
+    margin-top: auto;
+}
+
+.btn-light{
+    background-color:var(--neutral-color2);
+}
+
+/* Content */
+.flex{
+    display: flex;
+    height: 100vh;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.align-items-start{
+    align-items: flex-start;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.flex-item{
+    flex-basis: 33.3%;
+    height: 70vh;
+    padding: 40px;
+}
+
+.flex-item:first-child{
+    background-color: var(--primary-color1);
+}
+
+.flex-item:nth-child(2){
+    background-color: var(--primary-color2);
+}
+
+.flex-item:last-child{
+    background-color:var(--primary-color3);
+}
+
+.text-dark-orange{
+    color: var(--primary-color1);
+}
+
+.text-dark-blue{
+    color: var(--primary-color2);
+}
+
+.text-dark-green{
+    color:var(--primary-color3);
+}
+
+.btn.text-dark-orange:hover{
+    background-color: var(--primary-color1);
+    color: var(--neutral-color2);
+    border: 1px solid var(--neutral-color2);
+    cursor: pointer;
+}
+
+.btn.text-dark-blue:hover{
+    background-color: var(--primary-color2);
+    color: var(--neutral-color2);
+    border: 1px solid var(--neutral-color2);
+    cursor: pointer;
+}
+
+.btn.text-dark-green:hover{
+    background-color: var(--primary-color3);
+    color: var(--neutral-color2);
+    border: 1px solid var(--neutral-color2);
+    cursor: pointer;
+}
+
+/* mobile styles */
+@media screen and (max-width: 375px) {
+    .flex-sm-column{
+        flex-direction: column;
+    }
+    body{
+        margin:5% 15%;
+    }  
+}
