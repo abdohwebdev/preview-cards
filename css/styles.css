@@ -49,6 +49,7 @@ p{
 .flex{
     display: flex;
     height: 100vh;
+    flex-wrap: wrap;
 }
 
 .flex-column{
@@ -67,6 +68,7 @@ p{
     flex-basis: 33.3%;
     height: 70vh;
     padding: 40px;
+    flex: 1;
 }
 
 .flex-item:first-child{
@@ -116,6 +118,9 @@ p{
 
 /* mobile styles */
 @media screen and (max-width: 375px) {
+    .flex{
+        flex-wrap: nowrap;
+    }
     .flex-sm-column{
         flex-direction: column;
     }
